@@ -14,7 +14,8 @@ class String
   def to_mp3(filename, params={})
 
     text = params[:text] || self
-    system("echo \"#{text.to_s}\" | text2wave #{language} | lame - - > #{filename}.mp3 2> /dev/null")
+    raise "to_mp3 language option still not implemented" if params[:language]
+    system("echo \"#{text.to_s}\" | text2wave | lame - - > #{filename}.mp3 2> /dev/null")
   end
   
 end
