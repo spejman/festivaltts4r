@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+    <title>Festival TTS for Ruby - Make your Ruby Strings talk!</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Script-Type" content="text/javascript" />
+    <link href="festivaltts4r.css" media="screen" rel="Stylesheet" type="text/css" />
+</head>
+<body>
+
+<h1><img src="logo-festivaltts4r.jpg" alt="festivaltts4r logo"/></h1>
+
+<p>
+Make your Ruby Strings talk!
+</p>
+
+<code>
+"Talk to me".to_speech
+</code>
+<p>
+Tested and working in Ubuntu linux:
+</p>
+
+<h2>Install</h2>
+<ol>
+<li>Install <a href="http://www.cstr.ed.ac.uk/projects/festival/">festival tts</a><br/>
+<br/>
+<code>
+sudo apt-get install festival lame
+</code>
+<br/><br/>
+</li>
+<li>Install festivaltts4r gem:<br/>
+<br/>
+<code>
+sudo gem install festivaltts4r
+</code>
+<br/><br/>
+</li>
+<li>Make your strings talk:<br/>
+<br/>
+
+<pre>
+require "rubygems"
+require "festivaltts4r"
+
+"I'm talking".to_speech
+</pre>
+
+<br/><br/>
+</li>
+</ol>
+
+
+<!--
+<p>
+For more information visit my blog <a href="http://spejman.blogspot.com">spejman.blogspot.com</a> or email me.
+</p>
+-->
+
+<p class="credits">
+Work done by Sergio Espeja ( sergio.espeja at <a href="http://bee.com.es">bee.com.es</a> )
+</p>
+
+<script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
+</script>
+<script type="text/javascript">
+_uacct = "UA-262540-8";
+urchinTracker();
+</script>
+</body>
+</html>

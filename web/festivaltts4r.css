@@ -1,0 +1,38 @@
+body {
+    text-align: center;
+    font-family: georgia;
+    font-size: 1.5em;
+}
+
+code {
+    background-color: #ccc;
+    border: 1px dotted black;
+    padding: 20px;   
+    margin-bottom: 40px;
+}
+
+pre {
+    background-color: #ccc;
+    border: 1px dotted black;
+    padding: 20px;   
+    margin-bottom: 40px;
+    width: 200px;
+    text-align: left;
+}
+
+li {
+    text-align: center;
+}
+
+
+p {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.credits {
+    font-size: 0.8em;
+    font-style: italic;
+    left: 0px;
+    width:100%;
+}
