@@ -11,9 +11,9 @@ require 'hoe'
 include FileUtils
 require File.join(File.dirname(__FILE__), 'lib', 'festivaltts4r', 'version')
 
-AUTHOR = "spejman"  # can also be an array of Authors
-EMAIL = "your contact email for bug fixes and info"
-DESCRIPTION = "description of gem"
+AUTHOR = "Sergio Espeja"
+EMAIL = "sergio.espeja@gmail.com"
+DESCRIPTION = "Text-to-speech for Ruby using festivaltts. Provides two new methods for String: to_speech and to_mp3. Requires festivaltts and lame."
 GEM_NAME = "festivaltts4r" # what ppl will type to install your gem
 RUBYFORGE_PROJECT = "festivaltts4r" # The unix name for your project
 HOMEPATH = "http://#{RUBYFORGE_PROJECT}.rubyforge.org"

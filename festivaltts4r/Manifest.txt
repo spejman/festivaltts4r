@@ -1,9 +1,11 @@
+CHANGELOG.txt
 History.txt
 Manifest.txt
 README.txt
 Rakefile
-setup.rb
 lib/festivaltts4r.rb
+lib/festivaltts4r/festival4r.rb
 lib/festivaltts4r/version.rb
-test/test_helper.rb
+setup.rb
 test/festivaltts4r_test.rb
+test/test_helper.rb
