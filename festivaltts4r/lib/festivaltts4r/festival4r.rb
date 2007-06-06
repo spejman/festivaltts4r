@@ -3,14 +3,22 @@
 #
 # Requires festivaltts and lame.
 # Must be run in a UNIX environment.
+#
+# You can found more information in my english blog http://spejman-on-rails.blogspot.com 
+# or in the spanish one http://spejman.blogspot.com 
+#
+# Work done by Sergio Espeja (http://www.sergioespeja.com)
+#
+# It is free software, and may be redistributed under GPL license.
+# Copyright (c) 2007 Sergio Espeja
+
 
 class String
   
   # Outputs the speech generated with festival tts and the string itself.
   # Can handle two options:
   # - text --> speech given text instead of the string itself.
-  # - language --> speech language desired (festival voices for given languages
-  #  are required )  
+  # - language --> speech language desired (festival voices for given languages are required )  
   def to_speech(params={})  
     text = params[:text] || self
     language = "--language " + params[:language] if params[:language]
