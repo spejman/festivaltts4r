@@ -4,24 +4,22 @@ body {
     font-size: 1.5em;
 }
 
-code {
-    background-color: #ccc;
-    border: 1px dotted black;
-    padding: 20px;   
-    margin-bottom: 40px;
+pre {
+    text-align: left;
+    background-color: #ffc;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 15px;
+    border: 1px #888 solid;
+    font-size: 0.7em;
+    width: 300px;
 }
 
-pre {
-    background-color: #ccc;
-    border: 1px dotted black;
-    padding: 20px;   
-    margin-bottom: 40px;
-    width: 200px;
-    text-align: left;
-}
+
 
 li {
     text-align: center;
+    width: 310px;
 }
 
 
@@ -35,4 +33,18 @@ p {
     font-style: italic;
     left: 0px;
     width:100%;
+}
+
+.rails_plugin {
+    float:right;
+    width:45%;
+    margin-right: 25px;
+}
+
+.ruby_gem {
+    float:left;
+    width:45%;
+    margin-left: 25px;
+    padding-right: 25px;
+    border-right: 2px #888 dotted;
 }

@@ -14,58 +14,117 @@
 <body>
 
 <h1><img src="logo-festivaltts4r.jpg" alt="festivaltts4r logo"/></h1>
-
-<p>
-Make your Ruby Strings talk!
-</p>
-
-<code>
+<div class="ruby_gem">
+    <h2>Make your Ruby Strings talk!</h2>
+<pre>
 "Talk to me".to_speech
-</code>
+</pre>
 <p>
-Tested and working in Ubuntu linux:
+	Will speech the phrase "Talk to me"<br/>
+	by the computer speakers.
 </p>
+<p> RDOC: <a href="http://festivaltts4r.rubyforge.org/rdoc">http://festivaltts4r.rubyforge.org/rdoc</a></p>
+</div>
 
-<h2>Install</h2>
-<ol>
-<li>Install <a href="http://www.cstr.ed.ac.uk/projects/festival/">festival tts</a><br/>
-<br/>
-<code>
+<div class="rails_plugin">
+
+<h2>Make your Ruby on Rails Applications talk!</h2>
+<pre style="width: 400px;">
+<%= text_to_flash_player "I am a web page, \
+ 				but I talk" %>
+</pre>
+
+<p>
+	Will generate:<br/>
+<object type="application/x-shockwave-flash"
+    data="./flash/dewplayer.swf?son=./festivaltts_mp3/983783294.mp3&amp;bgcolor=FFFFFF" width="200"
+    height="20">
+    <param name="movie" value="./flash/dewplayer.swf?son=./festivaltts_mp3/983783294.mp3&amp;bgcolor=FFFFFF" />
+    </object>
+</p>
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+
+	<p>
+	Tested and working in Ubuntu linux <br/>
+	(it may work on Mac too, <br/>
+	<small>if you can test it please <a href="#contact">contact with me</a></small>):
+	</p>
+	
+<center>
+		<ol>
+			<li>Install <a href="http://www.cstr.ed.ac.uk/projects/festival/">festival tts</a> and <a href="http://lame.sourceforge.net/index.php">lame</a><br/>
+				<br/>
+<pre>
 sudo apt-get install festival lame
-</code>
-<br/><br/>
-</li>
-<li>Install festivaltts4r gem:<br/>
-<br/>
-<code>
-sudo gem install festivaltts4r
-</code>
-<br/><br/>
-</li>
-<li>Make your strings talk:<br/>
-<br/>
+</pre>
+				<br/><br/>
+			</li>
+			</ol>
+</center>
 
+<div class="ruby_gem">
+	<ol start="2">
+			<li>Install festivaltts4r gem:<br/>
+				<br/>
+<pre>
+sudo gem install festivaltts4r
+</pre>
+				<br/><br/>
+			</li>
+			<li>
+			Make your strings talk:<br/>
+				<br/>
+				
 <pre>
 require "rubygems"
 require "festivaltts4r"
-
+				
 "I'm talking".to_speech
-</pre>
-
-<br/><br/>
+</pre>				
 </li>
+</ol>
+</div>
+
+<div class="rails_plugin">				
+
+<ol start="2">
+<li>Install festivalttsOnRails plugin
+<pre style="width: 370px;">
+script/plugin install \
+svn://rubyforge.org/var/svn/\
+festivaltts4r/HEAD/festivaltts_on_rails
+</pre>
+</li>
+
+<li>Make your rails applications talk
+<pre style="width: 370px;">
+<%= text_to_flash_player "Talk me!" %>
+</pre>
+</li>
+
 </ol>
 
 
-<!--
+</div>
+
+<div style="clear:both;">&nbsp;</div>
+
+<a name="contact" />
 <p>
-For more information visit my blog <a href="http://spejman.blogspot.com">spejman.blogspot.com</a> or email me.
+You can found more information in my english blog <a href="http://spejman-on-rails.blogspot.com">spejman-on-rails.blogspot.com</a><br/> 
+or in the spanish one <a href="http://spejman.blogspot.com">spejman.blogspot.com</a>.
 </p>
--->
 
 <p class="credits">
-Work done by Sergio Espeja ( sergio.espeja at <a href="http://bee.com.es">bee.com.es</a> )
+Work done by <a href="http://www.sergioespeja.com">Sergio Espeja</a> ( sergio.espeja at <a href="http://bee.com.es">bee.com.es</a> )
 </p>
+
+<h3>Software License Agreement</h3>
+<p>
+It is free software, and may be redistributed under GPL license.<br/>
+Copyright (c) 2007 <a href="http://www.sergioespeja.com">Sergio Espeja</a></p>
 
 <script src="http://www.google-analytics.com/urchin.js" type="text/javascript">
 </script>
