@@ -1,4 +1,5 @@
 # FestivalttsOnRails
+require "digest/md5"
 require "#{File.dirname(__FILE__)}/festival4r.rb"
 
 MP3_FLASH_PLAYER_URL = "/flash/dewplayer.swf"
@@ -16,9 +17,9 @@ def text_to_flash_player(text, opts = {})
   width = opts[:width] if opts[:width]
   height = opts[:height] if opts[:height]
 
-  filename = "#{(1000000000*rand).round}.mp3"
-  
-  text.to_mp3(MP3_FOLDER_PATH + "/" + filename)
+  filename =  Digest::MD5.new(text).to_s + ".mp3"
+    
+  text.to_mp3(MP3_FOLDER_PATH + "/" + filename) unless File.exists?(MP3_FOLDER_PATH + "/" + filename)  
   html_for_mp3_flash(MP3_FOLDER_URL + "/" + filename)
 
 end
