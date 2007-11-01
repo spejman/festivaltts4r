@@ -26,8 +26,29 @@ class String
     festival = params[:festival] || "festival --tts"
     language = "--language " + params[:language] if params[:language]
 
-    cmd = "echo \"#{text.to_s}\" | #{festival} #{language}"
+    cmd = "echo \"#{text.to_s}\" | #{festival} #{language} 2>&1"
 
+    self.class.execute cmd
+
+  end
+  
+  # Creates a file with name "filename" and with the generated with festival tts, the string itself and lame.
+  # Can handle one options:
+  # - text --> speech given text instead of the string itself.  
+  # - text2wave - alternative text2wave program and options besides 'text2wave'
+  # - lame - alternative lame command other than 'lame --alt-preset cbr 16 -a --resample 11 --lowpass 5 --athtype 2 -X3 -'
+  def to_mp3(filename, params={})
+    text = params[:text] || self
+    text2wave = params[:text2wave] || "text2wave"
+    # athtype not on all LAMEs, i.e. --athtype 2 
+    lame = params[:lame] || "lame --alt-preset cbr 16 -a --resample 11 --lowpass 5 -X3 -"
+    raise "to_mp3 language option still not implemented" if params[:language]
+    cmd = "echo \"#{text.to_s}\" | #{text2wave} | #{lame} > #{filename} 2>&1"
+
+    self.class.execute cmd
+  end
+
+  def self.execute(cmd)
     begin
       out = IO.popen(cmd)
       Process.wait
@@ -38,16 +59,6 @@ class String
       raise FestivalSystemError.new("0 not returned:\n#{cmd}\n#{out.readlines}"
         ) unless e.eql?(0)
     end
-
-  end
-  
-  # Creates a file with name "filename" and with the generated with festival tts, the string itself and lame.
-  # Can handle one options:
-  # - text --> speech given text instead of the string itself.  
-  def to_mp3(filename, params={})
-    text = params[:text] || self
-    raise "to_mp3 language option still not implemented" if params[:language]
-    system("echo \"#{text.to_s}\" | text2wave | lame --alt-preset cbr 16 -a --resample 11 --lowpass 5 --athtype 2 -X3 - > #{filename} 2> /dev/null")
   end
   
 end
