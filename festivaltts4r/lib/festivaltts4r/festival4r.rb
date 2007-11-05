@@ -7,7 +7,7 @@
 # You can found more information in my english blog http://spejman-on-rails.blogspot.com 
 # or in the spanish one http://spejman.blogspot.com 
 #
-# Work done by Sergio Espeja (http://www.sergioespeja.com)
+# Work done by Sergio Espeja (http://www.sergioespeja.com) and Mike Mondragon (http://blog.mondragon.cc)
 #
 # It is free software, and may be redistributed under GPL license.
 # Copyright (c) 2007 Sergio Espeja
@@ -74,7 +74,7 @@ class FestivalError < RuntimeError
   attr_accessor :original_exception
 
   ##
-  # Creates a new MediaBotError with +message+ and +original_exception+
+  # Creates a new FestivalError with +message+ and +original_exception+
 
   def initialize(e)
     exception = e.class == String ? StandardError.new(e) : e
