@@ -1,0 +1,19 @@
+= Festival Text-To-Speech for Ruby
+
+FestivalTTS4r is an interface to Festival TTS Speech Synthesis System. Basically makes your strings talk:
+
+"Talk to me".to_speech
+
+The project also includes a rails plugin that let's you introduce speech easily into your Ruby on Rails applications.
+
+More information:
+http://festivaltts4r.rubyforge.org/
+
+== Credits
+Work done by Sergio Espeja ( sergio.espeja at bee.com.es ). Contributed by Mike Mondragon ( mikemondragon at gmail.com ).
+
+The flash mp3 player used to play the voice has been developed by dew|http://www.estvideo.com/dew/index/2005/02/16/370-player-flash-mp3-leger-comme-une-plume under Creative Commons Attribution-ShareAlike License France license.
+Software License Agreement
+
+It is free software, and may be redistributed under GPL license.
+Copyright (c) 2007 Sergio Espeja
