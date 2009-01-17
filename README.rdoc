@@ -4,7 +4,7 @@ FestivalTTS4r is an interface to Festival TTS Speech Synthesis System. Basically
 
 "Talk to me".to_speech
 
-The project also includes a rails plugin that let's you introduce speech easily into your Ruby on Rails applications.
+The project also includes a rails plugin (festivalttsOnRails) that let's you introduce speech easily into your Ruby on Rails applications. You can found it at the extras directory.
 
 More information:
 http://festivaltts4r.rubyforge.org/
